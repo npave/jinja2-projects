@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html; chrset = utf-8 ">
+        <title>About me</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+    </head>
+    
+    <body>
+       <div class='container'>
+        
+        {% macro list(things) -%}
+            <ul class='list-header'>
+                <li>Title</li>
+                <li>Author</li>
+                <li>Originally Published</li>
+                <li>Genre</li>
+                <li>Pages</li>
+            </ul>
+          {% for l in things %}
+            <ul class='new-book'>
+                <li> {{l.title}}</li>
+                <li>{{l.author}}</li>
+                <li>{{l.date}}</li>
+                <li>{{l.genre}}</li>
+                <li>{{l.pages}}</li>
+             </ul>
+          {% endfor %}
+
+        {%- endmacro %}
+       
+       <p class='title'>Novel</p>
+        {{ list(novel) }}
+        <p class='title'>Technical book</p>
+        {{ list(technical) }}
+       
+       </div>
+    
+    </body>
+</html>

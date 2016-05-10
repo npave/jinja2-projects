@@ -1,0 +1,46 @@
+.container{
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title{
+    font-size: 2em;
+}
+
+.list-header{
+    font-size: 1.2em;
+    color: white;
+    padding: 10px;
+}
+
+.new-book, .list-header{
+    text-decoration: none;
+    overflow: auto;
+    width: 80%;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+.new-book li, .list-header li{
+    display: inline;
+    float:left;
+    width: 20%;
+}
+
+.new-book:nth-child(even) {
+    background: #CCC
+}
+
+.new-book:nth-child(odd) {
+    background: #FFF
+}
+
+.list-header:nth-child(even) {
+    background: #00a1f1
+}
+
+.list-header:nth-child(odd) {
+    background: #34a853
+}
